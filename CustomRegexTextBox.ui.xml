@@ -1,0 +1,59 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:v="urn:import:com.fgmwallet.client.view.validation"
+	xmlns:b="urn:import:com.fgmwallet.client.ui.button">
+	<ui:style>
+		.html {
+			width: 100%;
+			float: left;
+			color: #ff0000;
+			font-size: 12px;
+		}
+		
+		.clear {
+			clear: both;
+		}
+		
+		.requiredsymbol {
+			color: red;
+			float: left;
+		}
+		
+		.image {
+			width: 10px;
+			float: right;
+			cursor: pointer;
+			padding: 1px;
+			margin-top: 5px;
+		}
+		
+		.textbox {
+			box-shadow: none !important;
+			border-radius: 0px !important;
+			background-color: #fff !important;
+			padding: 2px !important;
+			font-size: 12px;
+			color: #4a4a4a !important;
+			height: 15px;
+		}
+		
+		.wrapper {
+			border: 0px solid #fff;
+			background: #fff;
+			border-radius: 3px;
+			-moz-border-radius: 3px;
+			box-shadow: inset 0px 2px 3px 0px #999;
+			-webkit-box-shadow: inset 0px 2px 3px 0px #999;
+			-moz-box-shadow: inset 0px 2px 3px 0px #999;
+			padding: 5px;
+		}
+	</ui:style>
+	<ui:with field="res" type="com.fgmwallet.client.resources.EsewaResources" />
+
+	<g:FlowPanel styleName="{res.esewaCss.formC1}" ui:field="panel">
+		<g:Label ui:field="label"></g:Label>
+		<v:ValidatingTextBox ui:field="input" />
+		<g:HTMLPanel styleName="{style.clear}"></g:HTMLPanel>
+		<g:HTML ui:field="error" styleName="{style.html}"></g:HTML>
+	</g:FlowPanel>
+</ui:UiBinder>
